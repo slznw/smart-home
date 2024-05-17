@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart House v.1705</title>
+  <link rel="stylesheet" href="../dist/fakeLoader.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../dist/fakeLoader.min.js"></script>
+
+
+
+</head>
+<body>
+  <div class="fakeLoader"></div>
+  <script>
+    $.fakeLoader();
+ </script>
+  <header>
+    <img id="logo" src="img/logo.png" alt="Логотип">
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#" id="mainRoomLink">Главная комната</a></li>
+      <li><a href="#" id="kitchenLink">Кухня</a></li>
+      <li><a href="#" id="bedroomLink">Спальня</a></li>
+      <li><a href="#" id="settingsLink">Настройки</a></li>
+    </ul>
+  </nav>
+  <main>
+<div class="main-container" id="mainRoom">
+        <div class="statistics">
+          <h2>Статистика устройств</h2>
+          <p>Умный термостат "ТермоКонтроль": <span id="currentTemp">22</span> °C, режим: <span id="mode">Ручной</span></p>
+          <p>Умный замок "Безопасность+": <span id="lockStatus">Разблокировано</span></p>
+          <p>Умное освещение "ЛайтМастер": <span id="lightStatus">Выключено</span>, яркость: <span id="brightness">80</span>%, цвет: <span id="color">#ffffff</span></p>
+        </div>
+        <div class="settings">
+          <h2>Настройки устройств</h2>
+          <p>Настройки для умного термостата "ТермоКонтроль":<br>
+          Установить температуру: <input type="number" id="tempInput" min="0" max="40" value="22"> °C<br>
+          Изменить режим: <button id="autoMode">Автоматический</button> <button id="manualMode">Ручной</button></p>
+          <p>Настройки для умного замка "Безопасность+":<br>
+          Заблокировать: <button id="lock">Заблокировать</button><br>
+          Разблокировать: <button id="unlock">Разблокировать</button></p>
+          <p>Настройки для умного освещения "ЛайтМастер":<br>
+          Включить: <button id="turnOn">Включить</button><br>
+          Выключить: <button id="turnOff">Выключить</button><br>
+          Изменить яркость: <input type="range" id="brightnessSlider" min="0" max="100" value="80">%</p>
+          <p>Изменить цвет лампочки: <input type="color" id="colorPicker" value="#ffffff"></p>
+        </div>
+      </div>
+
+    <div class="main-container" id="kitchen" style="display:none;">
+        <div class="kstatistics" >
+          <h2>Статистика устройств</h2>
+          <p>Умный холодильник: Температура: <span id="fridgeTemp">4</span> °C</p>
+          <p>Умная плита: Состояние: <span id="stoveStatus">Выключено</span></p>
+          <p>Умный свет: <span id="kitchenLightStatus">Выключено</span>, яркость: <span id="kitchenBrightness">50</span>%, цвет: <span id="kitchenColor">#ffffff</span></p>
+        </div>
+        <div class="ksettings">
+          <h2>Настройки устройств</h2>
+          <p>Настройки для умного холодильника:<br>
+          Установить температуру: <input type="number" id="fridgeTempInput" min="-10" max="10" value="4"> °C
+          <button id="applyFridgeSettings">Применить</button>
+        </p>
+
+          <p>Настройки для умной плиты:<br>
+          Включить: <button id="stoveOn">Включить</button><br>
+          Выключить: <button id="stoveOff">Выключить</button></p>
+          <p>Настройки для умного света:<br>
+          Включить: <button id="kitchenLightOn">Включить</button><br>
+          Выключить: <button id="kitchenLightOff">Выключить</button><br>
+          Изменить яркость: <input type="range" id="kitchenBrightnessSlider" min="0" max="100" value="50">%</p>
+          <p>Изменить цвет лампочки: <input type="color" id="kitchenColorPicker" value="#ffffff"></p>
+        </div>
+      </div>
+      <div class="main-container" id="bedroom" style="display: none;">
+        <div class="bstatistics">
+            <h2>Статистика устройств</h2>
+            <p>Умный обогреватель "ТеплоДом": <span id="heaterStatus">Выключено</span></p>
+            <p>Умный будильник "УтроБудильник": время установки - <span id="alarmTime">7:00 AM</span></p>
+        </div>
+        <div class="bsettings">
+            <h2>Настройки устройств</h2>
+            <p>Настройки для умного обогревателя:<br>
+                Включить: <button id="heaterOn">Включить</button><br>
+                Выключить: <button id="heaterOff">Выключить</button><br>
+                Установить температуру: <input type="number" id="heaterTempInput" min="15" max="30" value="22"> °C</p>
+            <button id="applyHeaterSettings">Применить</button>
+            <p>Настройки для умного будильника:<br>
+                Установить время: <input type="time" id="alarmTimeInput" value="07:00"></p>
+            <button id="applyAlarmSettings">Применить</button>
+        </div>
+    </div>
+    <div class="main-container" id="settings" style="display: none;">
+      <div class="settings">
+          <h2>Настройки системы</h2>
+          <p>Перезагрузить умный дом: <button id="rebootSystem">Перезагрузить</button></p>
+          <p>Версия системы: <span id="systemVersion">1.0.0</span></p>
+          <p>Uptime: <span id="systemUptime">00:00:00</span></p>
+          <p>Обновление прошивки: <button id="updateFirmware">Обновить</button></p>
+      </div>
+  </div>
+  
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>

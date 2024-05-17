@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+  #logo {
+    width: 100px; /* Замените на ширину вашего логотипа */
+    height: auto;
+  }
+  nav {
+    width: 250px;
+    background-color: #e0e0e0;
+    float: left;
+    height: 100vh; /* Высота на всю высоту окна */
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  main {
+    margin-left: 150px; /* Отступ слева от бокового меню */
+    padding: 10px;
+  }
+
+  li:hover {
+    background-color: #ccc; /* Цвет фона при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета */
+  }
+  ul {
+    list-style-type: disc; /* Добавляет точки к пунктам списка */
+    padding-left: 40px; /* Добавляет отступ слева для точек */
+  }
+  .main-container {
+    flex: 1; /* Занимает оставшееся пространство */
+    display: flex; /* Размещает элементы статистики и настроек рядом */
+    margin-left: 30px; /* Добавляем отступ слева */
+  }
+  .statistics {
+    flex: 1; /* Занимает половину доступного пространства */
+    margin-left: 30px; /* Добавляем отступ слева */
+    
+  }
+  .settings {
+    flex: 1; /* Занимает половину доступного пространства */
+    /* ... (стили для блока настроек) ... */
+  }
+
+  .kstatistics {
+    flex: 1; /* Занимает половину доступного пространства */
+    margin-left: 30px; /* Добавляем отступ слева */
+    
+  }
+  .ksettings {
+    flex: 1; /* Занимает половину доступного пространства */
+    /* ... (стили для блока настроек) ... */
+  }
+
+  .bstatistics {
+    flex: 1; /* Занимает половину доступного пространства */
+    margin-left: 30px; /* Добавляем отступ слева */
+    
+  }
+  .bsettings {
+    flex: 1; /* Занимает половину доступного пространства */
+    /* ... (стили для блока настроек) ... */
+  }
+
+  .statistics, .settings {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.kstatistics, .ksettings {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.bstatistics, .bsettings {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
