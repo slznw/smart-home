@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Переход к настройкам
   document.getElementById('settingsLink').addEventListener('click', function () {
-      showBlock('settings');
+      showBlock('ssettings');
   });
 
   // Обработчик для кнопки "Перезагрузить систему"

@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+
+
 body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
   }
@@ -48,31 +56,34 @@ body {
   }
   .statistics {
     flex: 1; /* Занимает половину доступного пространства */
-    margin-left: 30px; /* Добавляем отступ слева */
+    margin-left: 15px; /* Добавляем отступ слева */
     
   }
   .settings {
     flex: 1; /* Занимает половину доступного пространства */
+    margin-left: 30px; /* Добавляем отступ слева */
     /* ... (стили для блока настроек) ... */
   }
 
   .kstatistics {
     flex: 1; /* Занимает половину доступного пространства */
-    margin-left: 30px; /* Добавляем отступ слева */
+    margin-left: 15px; /* Добавляем отступ слева */
     
   }
   .ksettings {
     flex: 1; /* Занимает половину доступного пространства */
+    margin-left: 30px; /* Добавляем отступ слева */
     /* ... (стили для блока настроек) ... */
   }
 
   .bstatistics {
     flex: 1; /* Занимает половину доступного пространства */
-    margin-left: 30px; /* Добавляем отступ слева */
+    margin-left: 15px; /* Добавляем отступ слева */
     
   }
   .bsettings {
     flex: 1; /* Занимает половину доступного пространства */
+    margin-left: 30px; /* Добавляем отступ слева */
     /* ... (стили для блока настроек) ... */
   }
 
@@ -91,6 +102,19 @@ body {
 }
 
 .bstatistics, .bsettings {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.ssettings {
+  flex: 1; /* Занимает половину доступного пространства */
+  margin-left: 30px; /* Добавляем отступ слева */
+  /* ... (стили для блока настроек) ... */
+}
+
+.ssettings {
   border: 1px solid #ccc;
   border-radius: 15px;
   padding: 20px;
